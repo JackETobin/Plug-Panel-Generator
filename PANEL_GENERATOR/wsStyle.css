@@ -1,0 +1,8 @@
+.Body {
+  background-color: aliceblue;
+}
+.GridWrapper {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}

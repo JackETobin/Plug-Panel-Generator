@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="wsStyle.css" />
+    <script src="DragDropMain.js"></script>
+    <style>
+      .Panel {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: rgb(15, 15, 15);
+        vertical-align: middle;
+        width: 400px;
+        margin: 2px;
+      }
+      .Plug {
+        width: 28px;
+        height: 28px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 6px;
+        background-color: rgb(15, 15, 15);
+        margin-top: 2px;
+        margin-bottom: 7px;
+        position: relative;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .Fill {
+        position: relative;
+        right: 2px;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+      }
+      .LeftStrip {
+        border: 0px solid rgb(255, 255, 255);
+        position: relative;
+        z-index: 2;
+        left: 35%;
+        width: 30px;
+        display: grid;
+        margin-bottom: 22px;
+        margin-top: 18px;
+      }
+      .RightStrip {
+        position: relative;
+        z-index: 2;
+        left: 35%;
+        width: 30px;
+        border: 0px solid rgb(255, 255, 255);
+        display: grid;
+        margin-bottom: 22px;
+        margin-top: 18px;
+      }
+    </style>
+  </head>
+  <body class="Body" onload="InitUniqueID()">
+    <input class="Body" type="number" id="LeftPlugInput" />
+    <input class="Body" type="number" id="RightPlugInput" />
+    <button id="BuildButton" onclick="BuildPanel()">BUILD</button>
+    <div class="GridWrapper" id="Wrapper"></div>
+  </body>
+</html>
